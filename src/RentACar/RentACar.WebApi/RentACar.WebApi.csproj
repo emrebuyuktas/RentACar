@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\RentACar.Application\RentACar.Application.csproj" />
   </ItemGroup>
 
 </Project>
