@@ -9,4 +9,5 @@ public class BrandsController : BaseController
     {
         var response = await Mediator.Send(command);
         return Created(string.Empty, response);
+    }
 }

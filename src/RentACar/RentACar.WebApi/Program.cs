@@ -1,4 +1,5 @@
 using RentACar.Application;
+using RentACar.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,7 @@ builder.Services.AddControllers();
 
 #region Externel Services
 builder.Services.AddApplicationServices();
+builder.Services.AddPersistenceServices(builder.Configuration);
 #endregion
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

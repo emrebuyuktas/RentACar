@@ -38,7 +38,7 @@ public interface IAsyncRepository<TEntity, TEntityId> : IQuery<TEntity> where TE
 
     Task<bool> AnyAsync(
                Expression<Func<TEntity, bool>>? predicate = null,
-                      bool withDeleted = false,
+                      bool withDeleted = false, bool enableTracking = true,
                              CancellationToken cancellationToken = default);
 
     Task<TEntity> AddAsync(TEntity entity, CancellationToken cancellationToken = default);
