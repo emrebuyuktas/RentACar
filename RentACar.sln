@@ -9,17 +9,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CorePackages", "CorePackage
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RentACar", "RentACar", "{3EE6811A-2EAA-4054-B9F6-85E8F9BE3C7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.WebApi", "src\RentACar\RentACar.WebApi\RentACar.WebApi.csproj", "{EA12492D-5CFA-478F-A6ED-3AF34A147CE8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.WebApi", "src\RentACar\RentACar.WebApi\RentACar.WebApi.csproj", "{EA12492D-5CFA-478F-A6ED-3AF34A147CE8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Persistence", "src\RentACar\RentACar.Persistence\RentACar.Persistence.csproj", "{A0739FDD-01B8-42A9-9A9B-C912E26DA003}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Persistence", "src\RentACar\RentACar.Persistence\RentACar.Persistence.csproj", "{A0739FDD-01B8-42A9-9A9B-C912E26DA003}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Domain", "src\RentACar\RentACar.Domain\RentACar.Domain.csproj", "{69ADB3F2-80FE-43CB-B36C-B81B214170F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Domain", "src\RentACar\RentACar.Domain\RentACar.Domain.csproj", "{69ADB3F2-80FE-43CB-B36C-B81B214170F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Application", "src\RentACar\RentACar.Application\RentACar.Application.csproj", "{0702AB4E-39A8-46A2-A3E9-96A83C72D042}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Application", "src\RentACar\RentACar.Application\RentACar.Application.csproj", "{0702AB4E-39A8-46A2-A3E9-96A83C72D042}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentACar.Infrastructure", "src\RentACar\RentACar.Infrastructure\RentACar.Infrastructure.csproj", "{1208E60F-E560-4523-BAEB-72E5AC191ECA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RentACar.Infrastructure", "src\RentACar\RentACar.Infrastructure\RentACar.Infrastructure.csproj", "{1208E60F-E560-4523-BAEB-72E5AC191ECA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Persistence", "src\CorePackages\Core.Persistence\Core.Persistence.csproj", "{18E16754-91D1-4FCC-B8D3-CF0A0A31F2F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Persistence", "src\CorePackages\Core.Persistence\Core.Persistence.csproj", "{18E16754-91D1-4FCC-B8D3-CF0A0A31F2F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Application", "src\CorePackages\Core.Application\Core.Application.csproj", "{4356243D-3ABA-4C4C-A411-AE8AC90B4B2D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{18E16754-91D1-4FCC-B8D3-CF0A0A31F2F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E16754-91D1-4FCC-B8D3-CF0A0A31F2F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E16754-91D1-4FCC-B8D3-CF0A0A31F2F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4356243D-3ABA-4C4C-A411-AE8AC90B4B2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4356243D-3ABA-4C4C-A411-AE8AC90B4B2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4356243D-3ABA-4C4C-A411-AE8AC90B4B2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4356243D-3ABA-4C4C-A411-AE8AC90B4B2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{0702AB4E-39A8-46A2-A3E9-96A83C72D042} = {3EE6811A-2EAA-4054-B9F6-85E8F9BE3C7F}
 		{1208E60F-E560-4523-BAEB-72E5AC191ECA} = {3EE6811A-2EAA-4054-B9F6-85E8F9BE3C7F}
 		{18E16754-91D1-4FCC-B8D3-CF0A0A31F2F6} = {25805E3D-C866-4991-804E-7FBC332FE723}
+		{4356243D-3ABA-4C4C-A411-AE8AC90B4B2D} = {25805E3D-C866-4991-804E-7FBC332FE723}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5950CC05-18AA-48E5-8E01-639BEFB2B083}
