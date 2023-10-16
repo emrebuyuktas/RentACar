@@ -16,6 +16,10 @@ public class BrandConfiguration : IEntityTypeConfiguration<Brand>
         builder.Property(b => b.DeletedDate).HasColumnName("DeletedDate");
         builder.Property(b => b.UpdatedDate).HasColumnName("UpdatedDate");
 
+        builder.HasIndex(b => b.Name,name:"UK_BRANDS_NAME").IsUnique();
+
+        builder.HasMany(b => b.Models);
+
         builder.HasQueryFilter(b => !b.DeletedDate.HasValue);
     }
 }

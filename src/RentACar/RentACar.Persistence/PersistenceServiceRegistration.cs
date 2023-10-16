@@ -13,7 +13,8 @@ public static class PersistenceServiceRegistration
     {
         services.AddDbContext<BaseDbContext>(options =>
         {
-            options.UseInMemoryDatabase("RentACarDb");
+            //options.UseInMemoryDatabase("RentACarDb");
+            options.UseSqlServer(configuration.GetConnectionString("RentACar"));
         });
 
         services.AddScoped<IBrandRepository, BrandRepository>();
