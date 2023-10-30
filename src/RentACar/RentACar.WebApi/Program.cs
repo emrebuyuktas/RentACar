@@ -10,6 +10,8 @@ builder.Services.AddControllers();
 #region Externel Services
 builder.Services.AddApplicationServices();
 builder.Services.AddPersistenceServices(builder.Configuration);
+//builder.Services.AddDistributedMemoryCache();
+builder.Services.AddStackExchangeRedisCache(options => options.Configuration = "localhost:6379");
 #endregion
 
 builder.Services.AddEndpointsApiExplorer();
@@ -23,7 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-if (app.Environment.IsProduction()) app.UseCustomExceptionHandler();
+if (!app.Environment.IsProduction()) app.UseCustomExceptionHandler();
 
 
 app.UseHttpsRedirection();

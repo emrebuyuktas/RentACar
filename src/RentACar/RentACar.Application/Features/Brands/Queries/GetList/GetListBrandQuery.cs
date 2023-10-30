@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Core.Application.Piplines.Caching;
 using Core.Application.Requests;
 using Core.Application.Responses;
 using Core.Persistence.Paging;
@@ -8,9 +9,13 @@ using RentACar.Domain.Entities;
 
 namespace RentACar.Application.Features.Brands.Queries.GetList;
 
-public class GetListBrandQuery : IRequest<GetListResponse<GetBrandListItemDto>>
+public class GetListBrandQuery : IRequest<GetListResponse<GetBrandListItemDto>>, ICachableRequest
 {
     public PageRequest PageRequest { get; set; }
+    public string CacheKey  => $"GetListBrandQuery:{PageRequest.PageIndex}:{PageRequest.PageSize}";
+    public bool BypassCache { get; }
+    public TimeSpan? SlidingExpiration { get; }
+    public string? CacheGroupKey => "GetBrands";
 }
 
 public class GetListBrandQueryHandler : IRequestHandler<GetListBrandQuery, GetListResponse<GetBrandListItemDto>>

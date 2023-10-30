@@ -1,4 +1,5 @@
-﻿using Core.Application.Piplines.Transaction;
+﻿using Core.Application.Piplines.Caching;
+using Core.Application.Piplines.Transaction;
 using Core.Application.Piplines.Validation;
 using Core.Application.Rules;
 using FluentValidation;
@@ -22,6 +23,10 @@ public static class ApplicationServiceRegistration
             cofiguration.AddOpenBehavior(typeof(RequestValidationBehavior<,>));
 
             cofiguration.AddOpenBehavior(typeof(TransactionScopeBehavior<,>));
+
+            cofiguration.AddOpenBehavior(typeof(CachingBehavior<,>));
+
+            cofiguration.AddOpenBehavior(typeof(CacheRemovingBehavior<,>));
         });
 
         services.AddSubClassesOfType(Assembly.GetExecutingAssembly(),typeof(BaseBusinessRules));

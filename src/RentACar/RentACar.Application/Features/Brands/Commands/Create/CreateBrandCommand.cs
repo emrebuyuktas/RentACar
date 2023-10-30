@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Core.Application.Piplines.Caching;
 using Core.Application.Piplines.Transaction;
 using MediatR;
 using RentACar.Application.Features.Brands.Rules;
@@ -7,9 +8,15 @@ using RentACar.Domain.Entities;
 
 namespace RentACar.Application.Features.Brands.Commands.Create;
 
-public class CreateBrandCommand : IRequest<CreatedBrandResponse> , ITransactiononalRequest
+public class CreateBrandCommand : IRequest<CreatedBrandResponse>, ITransactiononalRequest, ICacheRemoverRequest
 {
     public string Name { get; set; }
+
+    public string CacheKey => "";
+
+    public bool BypassCache => false;
+
+    public string? CacheGroupKey => "GetBrands";
 }
 
 public class CreateBrandCommandHandler : IRequestHandler<CreateBrandCommand, CreatedBrandResponse>
