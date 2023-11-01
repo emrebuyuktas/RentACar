@@ -35,7 +35,8 @@ public static class ApplicationServiceRegistration
         });
 
         //services.AddSingleton<LoggerServiceBase, FileLogger>();
-        services.AddSingleton<LoggerServiceBase, MsSqlLogger>();
+        //services.AddSingleton<LoggerServiceBase, MsSqlLogger>();
+        services.AddSingleton<LoggerServiceBase, ElasticSearchLogger>();
 
         services.AddSubClassesOfType(Assembly.GetExecutingAssembly(),typeof(BaseBusinessRules));
 
